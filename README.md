@@ -1,0 +1,2 @@
+# django-todo
+Django practices
