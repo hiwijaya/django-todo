@@ -5,4 +5,4 @@ def index(request):
     context = {
         'title': 'Authentication'
     }
-    return render(request, 'account/auth.html', context)
+    return render(request, 'auth.html', context)
