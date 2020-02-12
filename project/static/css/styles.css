@@ -1,4 +1,363 @@
-img {
-    width: 100px;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/* -- CSS RESET -- */
+body {
+    font-family: 'Rubik';
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.todo-image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #FFFFFF;
+}
+
+.todo-image-box img {
+    width: 50%;
+}
+
+.todo-app-box {
+    width: 600px;
+    padding: 50px;
+    background-color: #F8F9FB;
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 22pt;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #4C566A;
+}
+
+.input-box {
+    margin: 20px 0;
+}
+
+.input-task {
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    border: 1.5px solid #4E81AC;
+    border-radius: 8px;
+    font-size: 12pt;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.input-detail {
+    width: 100%;
     height: 100px;
+    padding: 10px;
+    border: 1.5px solid #4E81AC;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 12pt;
+    resize: none;
+}
+
+.input-task::placeholder,
+.input-detail::placeholder {
+    color: #D8DEE9;
+}
+
+.desc-icon {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.details-button,
+.cancel-button {
+    text-decoration: none;
+    color: #81A1C1;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+.cancel-button {
+    margin-right: 10px;
+}
+
+.input-button-box {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.save-button {
+    background-color: #5E81AC;
+    color: #fff;
+    height: 30px;
+    width: 100px;
+    border: 1px solid #5E81AC;
+    border-radius: 5px;
+    font-size: 10pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-button {
+    height: 50px;
+    width: 100%;
+    background-color: #88C0D0;
+    color: #fff;
+    border: 1px solid #88C0D0;
+    border-radius: 8px;
+    font-size: 14pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.empty-box {
+    text-align: center;
+    color: #7B88A1;
+    font-size: 14pt;
+    height: 50px;
+}
+
+
+.task-list {
+    margin: 10px 0;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.task-item:hover .task-delete {
+    visibility: visible;
+}
+
+.task-delete {
+    visibility: hidden;
+    display: flex;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-delete-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.task-title-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.bullet {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.task-title {
+    font-size: 14pt;
+    font-weight: 500;
+    color: #4c566a;
+}
+
+.task-detail {
+    font-size: 12pt;
+    margin-left: 35px;
+    color: #4c566a;
+    line-height: 1.3em;
+}
+
+.task-title-disabled {
+    font-size: 14pt;
+    font-weight: 500;
+    color: #B8B9BA;
+}
+
+.task-detail-disabled {
+    font-size: 12pt;
+    margin-left: 35px;
+    color: #B8B9BA;
+    line-height: 1.3em;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .todo-app-box {
+        width: 450px;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: #F4F7F6;
+    }
+
+    .todo-app-box {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        overflow-y: hidden;
+    }
+
+    .todo-image-box {
+        padding: 20px 0;
+    }
+
+    .todo-image-box img {
+        width: 50%;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
 }
