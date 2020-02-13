@@ -23,20 +23,20 @@
             <div id="task-list" class="task-list" ng-if="tasks.length > 0">
                 <div class="task-item" ng-repeat="task in tasks">
 
-                    <!-- <div style="flex: 1">
+                    <div style="flex: 1">
                         <div class="md-checkbox">
-                            <input id="{{ 'c' + $index }}" type="checkbox" ng-click="isDone($index)"
+                            <input id="c1" type="checkbox" ng-click="isDone($index)"
                                 ng-checked="task.status == 'DONE'" ng-disabled="task.status == 'DONE'">
-                            <label for="{{ 'c' + $index }}" ng-bind="task.title"
-                                ng-class="(task.status == 'DONE') ? 'task-title-disabled' : 'task-title'"></label>
+                            <label for="c1" ng-bind="task.title"
+                                ng-class="(task.status == 'DONE') ? 'task-title-disabled' : 'task-title'">Django</label>
                         </div>
                         <div class="task-detail" ng-bind="task.detail"
                             ng-class="(task.status == 'DONE') ? 'task-detail-disabled' : 'task-detail'"></div>
-                    </div> -->
+                    </div>
 
                     <div class="task-delete">
                         <a href="#" ng-click="delete(task.id)">
-                            <img class="task-delete-icon" src="{{ url_for('static', filename='img/delete.png') }}"
+                            <img class="task-delete-icon" src="/static/img/delete.png"
                                 alt="Delete" />
                         </a>
                     </div>
