@@ -34,7 +34,7 @@
     width: 1.25em;
     height: 1.25em;
     background-color: #F8F9FB;
-    border: 2px solid #4C566A;
+    border: 2px solid #739387;
     border-radius: 5px;
     cursor: pointer;
     transition: background .3s;
@@ -51,7 +51,7 @@
 }
 
 .md-checkbox input[type="checkbox"]:checked+label:before {
-    background: #88C0D0;
+    background: #90d5b8;
     border: none;
 }
 
